@@ -12,7 +12,6 @@ const FileSchema = z.object({
       message: 'File size should be less than 5MB',
     })
     // Updated the file type based on the kind of files you want to accept
-    // You can decide the file type you may requierd to upload 
     .refine((file) => ['image/jpeg', 'image/png'].includes(file.type), {
       message: 'File type should be JPEG or PNG',
     }),
